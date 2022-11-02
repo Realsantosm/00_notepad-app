@@ -15,22 +15,13 @@ const saveNotes = () => {
                 data.push(note.value)
             }
         )
-        // console.log(data)
+
     if (data.length === 0) {
         localStorage.removeItem("notes")
     } else {
         localStorage.setItem("notes", JSON.stringify(data))
     }
 }
-
-
-//  <div class="note">
-// <div class="tool">
-//     <i class="fas fa-save"></i>
-//     <i class="fas fa-trash"></i>
-// </div>
-// <textarea></textarea>
-// </div>
 
 const addNote = (text = "") => {
     const note = document.createElement("div");
